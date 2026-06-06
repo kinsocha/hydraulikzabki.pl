@@ -22,22 +22,27 @@ import { site } from '../config/site';
     </div>
 
     <div class="visual-panel" aria-label="Panel usługi hydraulicznej">
-      <div class="device">
-        <div class="status-card big">
-          <small>Najczęstsze zgłoszenia</small>
-          <strong>Zatkany odpływ albo cofająca woda</strong>
-          <p>Najpierw ustalam objawy: który punkt nie odbiera wody, czy problem dotyczy jednego odpływu, czy kilku urządzeń naraz.</p>
-          <div class="mini-grid">
-            <div class="mini"><b>01</b><span>rozpoznanie objawów</span></div>
-            <div class="mini"><b>02</b><span>mechaniczne udrożnienie</span></div>
-          </div>
+      <div class="status-card big">
+        <small>Najczęstsze zgłoszenia</small>
+        <strong>Zatkany odpływ albo cofająca woda</strong>
+        <p>Najpierw ustalam objawy: który punkt nie odbiera wody, czy problem dotyczy jednego odpływu, czy kilku urządzeń naraz.</p>
+        <div class="step-list">
+          <div class="step-pill"><b>01</b><span>rozpoznanie objawów</span></div>
+          <div class="step-pill"><b>02</b><span>mechaniczne udrożnienie</span></div>
         </div>
-        <div class="status-card">
-          <small>Sprzęt</small>
-          <strong>Sprężyna elektryczna</strong>
-          <p>Dobieram końcówkę i sposób pracy do rodzaju odpływu, średnicy rury oraz miejsca, w którym pojawia się opór.</p>
-        </div>
-        <div class="pipe-visual" aria-hidden="true"></div>
+      </div>
+      <div class="status-card">
+        <small>Sprzęt</small>
+        <strong>Sprężyna elektryczna</strong>
+        <p>Dobieram końcówkę i sposób pracy do rodzaju odpływu, średnicy rury oraz miejsca, w którym pojawia się opór.</p>
+      </div>
+      <div class="glow-dot-wrap">
+        <a class="wave-cta" href={`tel:${site.phoneTel}`}>{site.phone}</a>
+        <svg class="waves-svg" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path class="wv3" d="M0 55 Q150 40 300 55 Q450 70 600 55 Q750 40 900 55 Q1050 70 1200 55 L1200 80 L0 80 Z"/>
+          <path class="wv2" d="M0 47 Q150 32 300 47 Q450 62 600 47 Q750 32 900 47 Q1050 62 1200 47 L1200 80 L0 80 Z"/>
+          <path class="wv1" d="M0 38 Q150 20 300 38 Q450 56 600 38 Q750 20 900 38 Q1050 56 1200 38 L1200 80 L0 80 Z"/>
+        </svg>
       </div>
     </div>
   </div>
