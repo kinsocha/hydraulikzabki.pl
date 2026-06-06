@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+import { site } from '../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Hydraulik Ząbki | Udrażnianie rur, WC, zlewu i kanalizacji",
+  description = "Hydraulik Ząbki – udrażnianie rur i kanalizacji, przepychanie WC, zlewu, umywalki, wanny, brodzika, pionów i odpływów pralki lub zmywarki.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#123047" />
+  <link rel="canonical" href={site.canonical} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hydraulik Ząbki – udrażnianie rur, WC i kanalizacji" />
+  <meta property="og:description" content="Przepychanie rur, zlewów, WC, pionów i odpływów w Ząbkach. Mechaniczne udrażnianie sprężyną elektryczną." />
+  <meta property="og:url" content={site.canonical} />
+</head>
+<body>
+  <slot />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Hydraulik Ząbki",
+    "description": "Hydraulik Ząbki. Udrażnianie rur i kanalizacji, przepychanie WC, zlewu, umywalki, wanny, brodzika, odpływu pralki, zmywarki oraz pionów kanalizacyjnych.",
+    "telephone": site.phone,
+    "areaServed": ["Ząbki", "Marki", "Warszawa Targówek", "Warszawa Rembertów", "Warszawa i okolice"],
+    "url": site.canonical,
+    "priceRange": "PLN",
+    "serviceType": [
+      "Hydraulik Ząbki", "Udrażnianie rur Ząbki", "Przepychanie kanalizacji Ząbki",
+      "Przepychanie WC", "Udrażnianie zlewu", "Udrażnianie umywalki",
+      "Udrażnianie wanny i brodzika", "Udrażnianie odpływu pralki i zmywarki",
+      "Udrażnianie pionów kanalizacyjnych"
+    ]
+  })} />
+</body>
+</html>

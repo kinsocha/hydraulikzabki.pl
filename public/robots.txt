@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hydraulikzabki.pl/sitemap-index.xml

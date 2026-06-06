@@ -1,0 +1,22 @@
+---
+import { site } from '../config/site';
+---
+
+<a class="mobile-call" href={`tel:${site.phoneTel}`}>Zadzwoń: {site.phone}</a>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Hydraulik Ząbki">
+      <span class="logo">↯</span>
+      <span>Hydraulik Ząbki<small>udrażnianie rur i kanalizacji</small></span>
+    </a>
+    <nav class="menu" aria-label="Nawigacja">
+      <a href="#uslugi">Usługi</a>
+      <a href="#jak-pracuje">Jak pracuję</a>
+      <a href="#obszar">Ząbki i okolice</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href={`tel:${site.phoneTel}`}>☎ {site.phone}</a>
+    <button class="hamb" type="button" aria-label="Menu" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+  </div>
+</header>

@@ -1,0 +1,44 @@
+---
+import { site } from '../config/site';
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow"><span class="pulse"></span> Hydraulik w Ząbkach i okolicy</span>
+      <h1><span class="gradient-text">Hydraulik Ząbki</span><br />udrażnianie rur i kanalizacji</h1>
+      <p class="lead">Pomagam przy zatkanym zlewie, WC, wannie, brodziku, odpływie pralki, zmywarce oraz przy problemach z pionami i poziomami kanalizacyjnymi. Pracuję sprężyną elektryczną, gdy zator wymaga mechanicznego udrożnienia.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href={`tel:${site.phoneTel}`}>Zadzwoń teraz: {site.phone}</a>
+        <a class="btn" href="#uslugi">Zobacz zakres usług</a>
+      </div>
+      <div class="trustline">
+        <span>✓ Ząbki</span>
+        <span>✓ Marki</span>
+        <span>✓ Targówek</span>
+        <span>✓ Rembertów</span>
+        <span>✓ Warszawa i okolice</span>
+      </div>
+    </div>
+
+    <div class="visual-panel" aria-label="Panel usługi hydraulicznej">
+      <div class="device">
+        <div class="status-card big">
+          <small>Najczęstsze zgłoszenia</small>
+          <strong>Zatkany odpływ albo cofająca woda</strong>
+          <p>Najpierw ustalam objawy: który punkt nie odbiera wody, czy problem dotyczy jednego odpływu, czy kilku urządzeń naraz.</p>
+          <div class="mini-grid">
+            <div class="mini"><b>01</b><span>rozpoznanie objawów</span></div>
+            <div class="mini"><b>02</b><span>mechaniczne udrożnienie</span></div>
+          </div>
+        </div>
+        <div class="status-card">
+          <small>Sprzęt</small>
+          <strong>Sprężyna elektryczna</strong>
+          <p>Dobieram końcówkę i sposób pracy do rodzaju odpływu, średnicy rury oraz miejsca, w którym pojawia się opór.</p>
+        </div>
+        <div class="pipe-visual" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
