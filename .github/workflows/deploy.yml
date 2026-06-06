@@ -28,8 +28,6 @@ jobs:
           server: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           password: ${{ secrets.REMOTE_PASSWORD }}
-          protocol: ftps
-          port: 21
           local-dir: ./dist/
           server-dir: ./public_html/
           timeout: 60000
