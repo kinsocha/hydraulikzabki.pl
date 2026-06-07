@@ -10,21 +10,43 @@
     </div>
     <div class="area-grid">
       <div class="area">
-        <iframe src="https://www.google.com/maps?q=Ząbki,mazowieckie&output=embed&hl=pl&z=13" title="Hydraulik Ząbki" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=Ząbki,mazowieckie&output=embed&hl=pl&z=13" title="Hydraulik Ząbki" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <b>Ząbki</b><span>Udrażnianie rur, WC, zlewów, wanien, brodzików i odpływów w lokalach mieszkalnych oraz usługowych.</span>
       </div>
       <div class="area">
-        <iframe src="https://www.google.com/maps?q=Marki,mazowieckie&output=embed&hl=pl&z=13" title="Hydraulik Marki" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=Marki,mazowieckie&output=embed&hl=pl&z=13" title="Hydraulik Marki" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <b>Marki</b><span>Pomoc przy problemach z odpływem, kanalizacją i podejściami do urządzeń sanitarnych.</span>
       </div>
       <div class="area">
-        <iframe src="https://www.google.com/maps?q=Zielonka,mazowieckie&output=embed&hl=pl&z=13" title="Hydraulik Zielonka" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=Zielonka,mazowieckie&output=embed&hl=pl&z=13" title="Hydraulik Zielonka" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <b>Zielonka</b><span>Udrażnianie odpływów i kanalizacji w domach oraz lokalach na terenie Zielonki i okolicy.</span>
       </div>
       <div class="area">
-        <iframe src="https://www.google.com/maps?q=Rembertów,Warszawa&output=embed&hl=pl&z=13" title="Hydraulik Rembertów" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps?q=Rembertów,Warszawa&output=embed&hl=pl&z=13" title="Hydraulik Rembertów" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
         <b>Rembertów</b><span>Obsługa awarii kanalizacyjnych i miejscowych zatorów w instalacjach domowych.</span>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const wraps = document.querySelectorAll('.map-wrap');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = [...wraps].indexOf(entry.target);
+        setTimeout(() => entry.target.classList.add('glint'), idx * 280);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.35 });
+  wraps.forEach(w => observer.observe(w));
+</script>
